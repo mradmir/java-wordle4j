@@ -35,7 +35,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
         @Test
         void testWrongWordReturnsPattern() throws Exception {
-            WordleDictionary dict = new WordleDictionary(List.of("герой"));
+            WordleDictionary dict = new WordleDictionary(List.of("герой", "гонец"));
             WordleGame game = new WordleGame(dict);
 
             String result = game.tryWord("гонец");

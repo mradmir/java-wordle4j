@@ -1,5 +1,5 @@
 package ru.yandex.practicum;
-
+import java.util.*;
 import java.util.List;
 
 /*
@@ -10,5 +10,21 @@ import java.util.List;
 public class WordleDictionary {
 
     private List<String> words;
+    public WordleDictionary(List<String> words) {
+        this.words = words;
+    }
+
+    public List<String> getWords() {
+        return words;
+    }
+
+    public String getRandomWord() {
+        Random r = new Random();
+        return words.get(r.nextInt(words.size()));
+    }
+
+    public boolean contains(String word) {
+        return words.contains(word);
+    }
 
 }

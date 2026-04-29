@@ -11,6 +11,8 @@ import java.util.*;
 
 public class WordleDictionaryLoader {
 
+    private static final int WORD_LENGTH = 5;
+
     public static WordleDictionary load(String filePath) throws IOException {
         List<String> words = new ArrayList<>();
 
@@ -22,7 +24,7 @@ public class WordleDictionaryLoader {
             String line;
             while ((line = br.readLine()) != null) {
                 line = normalize(line);
-                if (line.length() == 5) {
+                if (line.length() == WORD_LENGTH) {
                     words.add(line);
                 }
             }
